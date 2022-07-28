@@ -5,5 +5,9 @@
   "editor.formatOnSave": true,
   "emmet.includeLanguages": {
     "django-html": "html"
-  }
+  },
+  "vscode-pets.position": "explorer",
+  "vscode-pets.theme": "forest",
+  "vscode-pets.petType": "rubber-duck",
+  "vscode-pets.petColor": "yellow"
 }
