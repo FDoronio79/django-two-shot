@@ -5,24 +5,24 @@
 {% block content %}
             <h1> My Receipts </h1>
             <a href="{% url 'create_category'%}"> Create Category <a/>
-            <table>
-                <tr>
-                    <th>Vendor</th>
-                    <th>Total</th>
-                    <th>Tax</th>
-                    <th>Date</th>
-                    <th>Category</th>
-                    <th>Account</th>
-                <tr>
-                {% for receipt in receipts.all %}
+                <table>
                     <tr>
-                        <td>{{receipt.vendor}}</td>
-                        <td>{{receipt.total}}</td>
-                        <td>{{receipt.tax}}</td>
-                        <td>{{receipt.date}}</td>
-                        <td>{{receipt.category}}</td>
-                        <td>{{receipt.account}}</td>
+                        <th>Vendor</th>
+                        <th>Total</th>
+                        <th>Tax</th>
+                        <th>Date</th>
+                        <th>Category</th>
+                        <th>Account</th>
                     <tr>
-                {% endfor %}
-            </table>
+                    {% for receipt in receipts.all %}
+                        <tr>
+                            <td>{{receipt.vendor}}</td>
+                            <td>{{receipt.total}}</td>
+                            <td>{{receipt.tax}}</td>
+                            <td>{{receipt.date}}</td>
+                            <td>{{receipt.category}}</td>
+                            <td>{{receipt.account}}</td>
+                        <tr>
+                    {% endfor %}
+                </table>
 {% endblock %}
