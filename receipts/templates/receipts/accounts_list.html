@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{%block title%} Recipt List {%endblock%}
+
+{% block content %}
+            <h1> Accounts </h1>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Number</th>
+                    <th>Number of receipts</th>
+                <tr>
+                {% for category in receipts.all %}
+                    <tr>
+                        <td>{{category.name}}</td>
+                        <td>{{category.number}}</td>
+                        <td>{{category.receipts.all|length}}</td>
+                    <tr>
+                {% endfor %}
+            </table>
+{% endblock %}

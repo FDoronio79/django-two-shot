@@ -1,7 +1,21 @@
 from django import forms
-from receipts.models import Receipt
+from receipts.models import Receipt, ExpenseCategory, Account
 
 class ReceiptForm(forms.ModelForm):
     class Meta:
         model = Receipt
-        fields = "__all__"
+        fields = [ 
+            "vendor",
+            "total",
+            "tax",
+            "date",
+            "category",
+            "account",
+        ]
+
+class ExpenseCategoryForm(forms.ModelForm):
+    class Meta:
+        model = ExpenseCategory
+        fields = [
+            "name",
+        ]

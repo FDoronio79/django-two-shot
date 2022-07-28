@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{%block title%} Recipt List {%endblock%}
+
+{% block content %}
+            <h1> Expense Categories </h1>
+            <a href="{% url 'create_category'%}"> Create Category <a/>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Number of receipts</th>
+                <tr>
+                {% for category in receipts.all %}
+                    <tr>
+                        <td>{{category.name}}</td>
+                        <td>{{category.receipts.all|length}}</td>
+                    <tr>
+                {% endfor %}
+            </table>
+{% endblock %}

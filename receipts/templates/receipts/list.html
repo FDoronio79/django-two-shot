@@ -4,6 +4,7 @@
 
 {% block content %}
             <h1> My Receipts </h1>
+            <a href="{% url 'create_category'%}"> Create Category <a/>
             <table>
                 <tr>
                     <th>Vendor</th>
@@ -19,7 +20,6 @@
                         <td>{{receipt.total}}</td>
                         <td>{{receipt.tax}}</td>
                         <td>{{receipt.date}}</td>
-                        <td>{{receipt.purchaser}}</td>
                         <td>{{receipt.category}}</td>
                         <td>{{receipt.account}}</td>
                     <tr>
